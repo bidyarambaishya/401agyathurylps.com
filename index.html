@@ -11,6 +11,41 @@ Government of Assam | Department of Elementary Education
 </div>
 
 <header>
+  <!-- Government Style Header -->
+<div class="topbar">
+  <img src="images/emblem.png" class="logo">
+  <div class="title">
+    <h1>401 Agyathury LPS</h1>
+    <p>Department of School Education, Assam Government</p>
+  </div>
+</div>
+
+<!-- Banner Slider -->
+<div class="gov-slider">
+  <div class="gov-slides">
+    <img src="images/banner1.jpg" class="active">
+    <img src="images/banner2.jpg">
+    <img src="images/banner3.jpg">
+  </div>
+  <div class="overlay-text">
+    <h2>Welcome to 401 Agyathury LPS</h2>
+    <p>Quality Education for Every Child</p>
+  </div>
+</div>
+
+<script>
+let index = 0;
+const govSlides = document.querySelectorAll(".gov-slides img");
+
+function autoSlide() {
+  govSlides.forEach(img => img.classList.remove("active"));
+  index++;
+  if (index > govSlides.length) { index = 1; }
+  govSlides[index-1].classList.add("active");
+  setTimeout(autoSlide, 4000);
+}
+autoSlide();
+</script>
 <img src="logo.png" class="logo">
 <div>
 <h1>401 No. Agyathury L.P. School</h1>
