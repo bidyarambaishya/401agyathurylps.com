@@ -10,7 +10,6 @@ body{
     background:#f4f6f9;
     margin:0;
 }
-
 .container{
     max-width:800px;
     background:white;
@@ -19,19 +18,16 @@ body{
     border-radius:10px;
     box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
-
 h2{
     text-align:center;
     color:#0d6efd;
     margin-bottom:30px;
 }
-
 label{
     font-weight:bold;
     display:block;
     margin-top:15px;
 }
-
 input, select, textarea{
     width:100%;
     padding:10px;
@@ -39,16 +35,13 @@ input, select, textarea{
     border:1px solid #ccc;
     border-radius:5px;
 }
-
 .row{
     display:flex;
     gap:15px;
 }
-
 .row div{
     flex:1;
 }
-
 button{
     margin-top:20px;
     padding:12px;
@@ -59,7 +52,6 @@ button{
     cursor:pointer;
     font-size:16px;
 }
-
 button:hover{
     background:#084298;
 }
@@ -72,20 +64,20 @@ button:hover{
 
 <h2>🎓 Student Admission Form</h2>
 
-<form action=https://script.google.com/macros/s/AKfycbzijEVpj3aY6fu39H7FBotYT13HVjK-PCiYdbpleerpn5qdnrfOc1bgjfP5KA42CwHN/exec>
+<form action="https://script.google.com/macros/s/AKfycbzijEVpj3aY6fu39H7FBotYT13HVjK-PCiYdbpleerpn5qdnrfOc1bgjfP5KA42CwHN/exec" method="POST">
 
 <label>Student Full Name</label>
-<input type="text" required>
+<input type="text" name="name" required>
 
 <div class="row">
 <div>
 <label>Date of Birth</label>
-<input type="date" required>
+<input type="date" name="dob" required>
 </div>
 
 <div>
 <label>Gender</label>
-<select required>
+<select name="gender" required>
 <option value="">Select</option>
 <option>Male</option>
 <option>Female</option>
@@ -95,7 +87,7 @@ button:hover{
 </div>
 
 <label>Class Applying For</label>
-<select required>
+<select name="class" required>
 <option value="">Select Class</option>
 <option>Class KA</option>
 <option>Class I</option>
@@ -106,19 +98,16 @@ button:hover{
 </select>
 
 <label>Father's Name</label>
-<input type="text" required>
+<input type="text" name="father" required>
 
 <label>Mother's Name</label>
-<input type="text" required>
+<input type="text" name="mother" required>
 
 <label>Guardian Contact Number</label>
-<input type="tel" required>
+<input type="tel" name="phone" required>
 
 <label>Address</label>
-<textarea rows="3" required></textarea>
-
-<label>Upload Student Photo</label>
-<input type="file" accept="image/*">
+<textarea name="address" rows="3" required></textarea>
 
 <button type="submit">Submit Application</button>
 
