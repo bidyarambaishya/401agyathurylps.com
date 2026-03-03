@@ -4,29 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>401 Agyathury LPS</title>
+
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 <style>
 .top-header{
 background:#002147;
 color:white;
 padding:10px;
-}
-.banner{
-height:400px;
-object-fit:cover;
+text-align:center;
 }
 .notice-bar{
 background:orange;
 color:black;
 padding:5px;
 font-weight:bold;
+text-align:center;
+}
+.banner{
+height:400px;
+object-fit:cover;
 }
 .footer{
 background:#002147;
 color:white;
 padding:15px;
 text-align:center;
+margin-top:40px;
 }
 </style>
 </head>
@@ -34,97 +39,106 @@ text-align:center;
 <body>
 
 <!-- Header -->
-<div class="top-header text-center">
-<p>Department of School Education, Government of Assam</p>
+<div class="top-header">
 <h2>401 Agyathury LPS</h2>
+<p>Department of School Education, Government of Assam</p>
 </div>
 
 <!-- Navbar -->
-  <div class="container">
-    
-    <a class="navbar-brand" href="index.html">Home</a>
-    
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        
-        <li class="nav-item">
-          <a class="nav-link" href="about.html">About</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="academics.html">Academics</a>
-        </li>
-        
-        <!-- Administration Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Administration
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="teachers.html">Teachers</a></li>
-            <li><a class="dropdown-item" href="smc.html">SMC</a></li>
-          </ul>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="gallery.html">Gallery</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-        
-      </ul>
-    </div>
-    
-  </div>
-</nav>
-<div id="schoolCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-	
-	<div class="carousel-inner">
-		
-		<div class="carousel-item active">
-			<img src="banner1.jpeg" class="d-block w-100" style="height:400px; object-fit:cover;">
-		</div>
-		
-		<div class="carousel-item">
-			<img src="images/banner2.jpeg" class="d-block w-100" style="height:400px; object-fit:cover;">
-		</div>
-		
-		<div class="carousel-item">
-			<img src="images/banner.jpeg" class="d-block w-100" style="height:400px; object-fit:cover;">
-		</div>
-		
-	</div>
-	
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+
+<a class="navbar-brand" href="index.html">Home</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="academics.html">Academics</a>
+</li>
+
+<!-- Administration Dropdown -->
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+Administration
+</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="teachers.html">Teachers</a></li>
+<li><a class="dropdown-item" href="smc.html">SMC</a></li>
+</ul>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="gallery.html">Gallery</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="contact.html">Contact</a>
+</li>
+
+</ul>
 </div>
 
-<!-- Bootstrap JS (Must Required) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+</nav>
+
+<!-- Carousel -->
+<div id="schoolCarousel" class="carousel slide" data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+<img src="images/banner1.jpeg" class="d-block w-100 banner">
+</div>
+
+<div class="carousel-item">
+<img src="images/banner2.jpeg" class="d-block w-100 banner">
+</div>
+
+<div class="carousel-item">
+<img src="images/banner3.jpeg" class="d-block w-100 banner">
+</div>
+
+</div>
+
+<button class="carousel-control-prev" type="button" data-bs-target="#schoolCarousel" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" type="button" data-bs-target="#schoolCarousel" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
 
 <!-- Notice Bar -->
 <div class="notice-bar">
-Latest Notice: 
-<a href="admissions.html" style="color:black; text-decoration:none;">
-  Admission Open for 2026-27 Session – Click Here
-</a>
+Latest Notice: Admission Open for 2026-27 Session
 </div>
+
 <!-- About Section -->
 <div class="container mt-4">
 <h3>About Our School</h3>
-<p>401 Agyathury LPS is committed to providing quality education and holistic development of students.</p>
+<p>
+401 Agyathury LPS is committed to providing quality education and holistic development of students.
+Our mission is to create a safe and engaging learning environment.
+</p>
 </div>
 
 <!-- Footer -->
-<div class="footer mt-4">
+<div class="footer">
 © 2026 401 Agyathury LPS | All Rights Reserved
 </div>
 
-<!-- Bootstrap JS -->
+<!-- Bootstrap JS (Very Important) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
