@@ -1,81 +1,85 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
-<title>Student Admission Form</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Admission Form</title><style>
 body{
-    font-family: Arial, sans-serif;
-    background:#f4f6f9;
-    margin:0;
+font-family: Arial, sans-serif;
+background:#f4f6f9;
+margin:0;
 }
+
 .container{
-    max-width:800px;
-    background:white;
-    margin:40px auto;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+max-width:800px;
+background:white;
+margin:40px auto;
+padding:30px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
+
 h2{
-    text-align:center;
-    color:#0d6efd;
-    margin-bottom:30px;
+text-align:center;
+color:#0d6efd;
+margin-bottom:30px;
 }
+
 label{
-    font-weight:bold;
-    display:block;
-    margin-top:15px;
+font-weight:bold;
+display:block;
+margin-top:15px;
 }
+
 input, select, textarea{
-    width:100%;
-    padding:10px;
-    margin-top:5px;
-    border:1px solid #ccc;
-    border-radius:5px;
+width:100%;
+padding:10px;
+margin-top:5px;
+border:1px solid #ccc;
+border-radius:5px;
 }
+
 .row{
-    display:flex;
-    gap:15px;
+display:flex;
+gap:15px;
 }
+
 .row div{
-    flex:1;
+flex:1;
 }
+
 button{
-    margin-top:20px;
-    padding:12px;
-    background:#0d6efd;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-    font-size:16px;
+margin-top:20px;
+padding:12px;
+background:#0d6efd;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+width:100%;
 }
+
 button:hover{
-    background:#084298;
+background:#084298;
 }
-</style>
-</head>
 
-<body>
-
-<div class="container">
-
-<h2>🎓 Student Admission Form</h2>
-
-<form action="https://script.google.com/macros/s/AKfycbyBMaFqA7DwpaHV-F4gQqXPV7Bt0YEot1tOWrAQingPuE8jNJWQblNqEHmTo2ONah3dDQ/exec">
-
-<label>Student Full Name</label>
+.success{
+display:none;
+background:#d4edda;
+color:#155724;
+padding:10px;
+margin-top:20px;
+border-radius:5px;
+text-align:center;
+}
+</style></head><body><div class="container"><h2>🎓 Student Admission Form</h2><form id="admissionForm"><label>Student Full Name</label>
 <input type="text" name="name" required>
 
 <div class="row">
 <div>
 <label>Date of Birth</label>
 <input type="date" name="dob" required>
-</div>
-
-<div>
+</div><div>
 <label>Gender</label>
 <select name="gender" required>
 <option value="">Select</option>
@@ -84,10 +88,9 @@ button:hover{
 <option>Other</option>
 </select>
 </div>
-</div>
-
-<label>Class Applying For</label>
+</div><label>Class Applying For</label>
 <select name="class" required>
+
 <option value="">Select Class</option>
 <option>Class KA</option>
 <option>Class I</option>
@@ -95,9 +98,7 @@ button:hover{
 <option>Class III</option>
 <option>Class IV</option>
 <option>Class V</option>
-</select>
-
-<label>Father's Name</label>
+</select><label>Father's Name</label>
 <input type="text" name="father" required>
 
 <label>Mother's Name</label>
@@ -107,13 +108,24 @@ button:hover{
 <input type="tel" name="phone" required>
 
 <label>Address</label>
-<textarea name="address" rows="3" required></textarea>
 
-<button type="submit">Submit Application</button>
+<textarea name="address" rows="3" required></textarea><button type="submit">Submit Application</button>
 
-</form>
+</form><div class="success" id="successMsg">
+✅ Application Submitted Successfully
+</div></div><script>
+const scriptURL = "https://script.google.com/macros/s/AKfycbyBMaFqA7DwpaHV-F4gQqXPV7Bt0YEot1tOWrAQingPuE8jNJWQblNqEHmTo2ONah3dDQ/exec"
+const form = document.getElementById('admissionForm')
 
-</div>
+form.addEventListener('submit', e => {
+e.preventDefault()
 
-</body>
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+.then(response => {
+document.getElementById("successMsg").style.display="block"
+form.reset()
+})
+.catch(error => alert("Error submitting form"))
+})
+</script></body>
 </html>
